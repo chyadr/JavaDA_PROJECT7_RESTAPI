@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "rating")
@@ -31,12 +32,22 @@ public class Rating {
         this.id = id;
     }
 
+    public Rating id (Integer id) {
+        this.id = id;
+        return this;
+    }
+
     public String getMoodysRating() {
         return moodysRating;
     }
 
     public void setMoodysRating(String moodysRating) {
         this.moodysRating = moodysRating;
+    }
+
+    public Rating moodysRating (String moodysRating) {
+        this.moodysRating = moodysRating;
+        return this;
     }
 
     public String getSandPRating() {
@@ -46,6 +57,10 @@ public class Rating {
     public void setSandPRating(String sandPRating) {
         this.sandPRating = sandPRating;
     }
+    public Rating sandPRating (String sandPRating) {
+        this.sandPRating = sandPRating;
+        return this;
+    }
 
     public String getFitchRating() {
         return fitchRating;
@@ -53,6 +68,10 @@ public class Rating {
 
     public void setFitchRating(String fitchRating) {
         this.fitchRating = fitchRating;
+    }
+    public Rating fitchRating (String fitchRating) {
+        this.fitchRating = fitchRating;
+        return this;
     }
 
     public Integer getOrderNumber() {
@@ -63,6 +82,10 @@ public class Rating {
         this.orderNumber = orderNumber;
     }
 
+    public Rating orderNumber (Integer orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
     @Override
     public String toString() {
         return "Rating{" +

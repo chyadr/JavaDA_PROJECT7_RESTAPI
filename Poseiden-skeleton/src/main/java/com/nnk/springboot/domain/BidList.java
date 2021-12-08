@@ -67,6 +67,10 @@ public class BidList {
     public void setBidListId(Integer bidListId) {
         this.bidListId = bidListId;
     }
+    public BidList bidListId( Integer bidListId) {
+        this.bidListId = bidListId;
+        return this;
+    }
 
     public String getAccount() {
         return account;
@@ -75,6 +79,11 @@ public class BidList {
     public void setAccount(String account) {
         this.account = account;
     }
+    public BidList account (String account) {
+        this.account = account;
+        return this;
+    }
+
 
     public String getType() {
         return type;
@@ -82,6 +91,10 @@ public class BidList {
 
     public void setType(String type) {
         this.type = type;
+    }
+    public BidList type (String type) {
+        this.type = type;
+        return this;
     }
 
     public Double getBidQuantity() {
@@ -91,6 +104,10 @@ public class BidList {
     public void setBidQuantity(Double bidQuantity) {
         this.bidQuantity = bidQuantity;
     }
+    public BidList bidQuantity (Double bidQuantity) {
+        this.bidQuantity = bidQuantity;
+        return this;
+    }
 
     public Double getAskQuantity() {
         return askQuantity;
@@ -98,6 +115,10 @@ public class BidList {
 
     public void setAskQuantity(Double askQuantity) {
         this.askQuantity = askQuantity;
+    }
+    public BidList askQuantity (Double askQuantity) {
+        this.askQuantity = askQuantity;
+        return this;
     }
 
     public Double getBid() {
@@ -107,6 +128,10 @@ public class BidList {
     public void setBid(Double bid) {
         this.bid = bid;
     }
+    public BidList bid (Double bid) {
+        this.bid = bid;
+        return this;
+    }
 
     public Double getAsk() {
         return ask;
@@ -114,6 +139,10 @@ public class BidList {
 
     public void setAsk(Double ask) {
         this.ask = ask;
+    }
+    public BidList ask (Double ask) {
+        this.ask = ask;
+        return this;
     }
 
     public String getBenchmark() {
@@ -123,6 +152,10 @@ public class BidList {
     public void setBenchmark(String benchmark) {
         this.benchmark = benchmark;
     }
+    public BidList benchmark (String benchmark) {
+        this.benchmark = benchmark;
+        return this;
+    }
 
     public Timestamp getBidListDate() {
         return bidListDate;
@@ -130,6 +163,10 @@ public class BidList {
 
     public void setBidListDate(Timestamp bidListDate) {
         this.bidListDate = bidListDate;
+    }
+    public BidList bidListDate (Timestamp bidListDate) {
+        this.bidListDate = bidListDate;
+        return this;
     }
 
     public String getCommentary() {
@@ -276,5 +313,7 @@ public class BidList {
                 ", side='" + side + '\'' +
                 '}';
     }
+
+
 }
 

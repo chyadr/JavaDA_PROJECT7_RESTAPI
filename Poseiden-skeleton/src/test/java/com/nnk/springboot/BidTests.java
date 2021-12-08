@@ -2,8 +2,11 @@ package com.nnk.springboot;
 
 import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.repositories.BidListRepository;
+import com.nnk.springboot.services.impl.BidListService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -14,11 +17,14 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@DataJpaTest
+
 public class BidTests {
 
-	@Autowired
+	@InjectMocks
+	private BidListService bidListService;
+	@Mock
 	private BidListRepository bidListRepository;
+
 
 	@Test
 	public void bidListTest() {
@@ -47,3 +53,25 @@ public class BidTests {
 		assertFalse(bidList.isPresent());
 	}
 }
+/*
+ @InjectMocks
+        private AccountService accountService;
+
+        @Mock
+        private AccountRepository accountRepository;
+        @Mock
+        private UserService userService;
+
+
+
+        @Test
+        public void givenAccount_whenSaveAccount_thenReturnAccount() {
+
+            when(accountRepository.save(any())).thenReturn(ConstantsTest.account);
+            Account account = accountService.saveAccount(ConstantsTest.account);
+            assertNotNull(account);
+
+        }
+
+
+ */

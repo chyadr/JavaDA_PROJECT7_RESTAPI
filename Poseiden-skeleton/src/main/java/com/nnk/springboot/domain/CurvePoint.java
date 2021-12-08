@@ -37,12 +37,22 @@ public class CurvePoint {
         this.id = id;
     }
 
+    public CurvePoint id (Integer id) {
+        this.id = id;
+        return this;
+    }
+
     public Integer getCurveId() {
         return curveId;
     }
 
     public void setCurveId(Integer curveId) {
         this.curveId = curveId;
+    }
+
+    public CurvePoint curveId (Integer curveId) {
+        this.curveId = curveId;
+        return this;
     }
 
     public Date getAsOfDate() {
@@ -52,6 +62,11 @@ public class CurvePoint {
     public void setAsOfDate(Date asOfDate) {
         this.asOfDate = asOfDate;
     }
+    public CurvePoint asOfDate (Date asOfDate) {
+        this.asOfDate = asOfDate;
+        return this;
+    }
+
 
     public Double getTerm() {
         return term;
@@ -59,6 +74,11 @@ public class CurvePoint {
 
     public void setTerm(Double term) {
         this.term = term;
+    }
+
+    public CurvePoint term (double term) {
+        this.term = term;
+        return this;
     }
 
     public Double getValue() {
@@ -69,12 +89,22 @@ public class CurvePoint {
         this.value = value;
     }
 
+    public CurvePoint value (Double value) {
+        this.value = value;
+        return this;
+    }
+
     public Date getCreationDate() {
         return creationDate;
     }
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public CurvePoint creationDate (Date creationDate) {
+        this.creationDate = creationDate;
+        return this;
     }
 
     @Override
