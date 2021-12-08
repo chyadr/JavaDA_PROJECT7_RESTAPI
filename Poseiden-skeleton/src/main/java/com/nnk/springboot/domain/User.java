@@ -9,12 +9,16 @@ public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
+    @Column(name = "username")
     @NotBlank(message = "Username is mandatory")
     private String username;
+    @Column(name = "password")
     @NotBlank(message = "Password is mandatory")
     private String password;
+    @Column(name = "fullname")
     @NotBlank(message = "FullName is mandatory")
     private String fullname;
+    @Column(name = "role")
     @NotBlank(message = "Role is mandatory")
     private String role;
 
@@ -56,5 +60,16 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", fullname='" + fullname + '\'' +
+                ", role='" + role + '\'' +
+                '}';
     }
 }
