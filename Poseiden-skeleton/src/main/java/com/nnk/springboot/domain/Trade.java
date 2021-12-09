@@ -1,8 +1,12 @@
 package com.nnk.springboot.domain;
 
+import com.nnk.springboot.Constants;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.sql.Timestamp;
+import java.util.Date;
 
 
 @Entity
@@ -26,8 +30,9 @@ public class Trade {
     private Double sellPrice;
     @Column(name = "benchmark")
     private String benchmark;
+    @DateTimeFormat(pattern = Constants.DATE_PATTERN)
     @Column(name = "tradeDate")
-    private Timestamp tradeDate;
+    private Date tradeDate;
     @Column(name = "security")
     private String security;
     @Column(name = "status")
@@ -61,12 +66,22 @@ public class Trade {
         this.tradeId = tradeId;
     }
 
+    public Trade tradeId (Integer tradeId) {
+        this.tradeId = tradeId;
+        return this;
+    }
+
     public String getAccount() {
         return account;
     }
 
     public void setAccount(String account) {
         this.account = account;
+    }
+
+    public Trade account (String account) {
+        this.account = account;
+        return this;
     }
 
     public String getType() {
@@ -77,12 +92,22 @@ public class Trade {
         this.type = type;
     }
 
+    public Trade type (String type) {
+        this.type = type;
+        return this;
+    }
+
     public Double getBuyQuantity() {
         return buyQuantity;
     }
 
     public void setBuyQuantity(Double buyQuantity) {
         this.buyQuantity = buyQuantity;
+    }
+
+    public Trade buyQuantity (Double buyQuantity) {
+        this.buyQuantity = buyQuantity;
+        return this;
     }
 
     public Double getSellQuantity() {
@@ -92,6 +117,10 @@ public class Trade {
     public void setSellQuantity(Double sellQuantity) {
         this.sellQuantity = sellQuantity;
     }
+    public Trade sellQuantity (Double sellQuantity) {
+        this.sellQuantity = sellQuantity;
+        return this;
+    }
 
     public Double getBuyPrice() {
         return buyPrice;
@@ -99,6 +128,10 @@ public class Trade {
 
     public void setBuyPrice(Double buyPrice) {
         this.buyPrice = buyPrice;
+    }
+    public Trade buyPrice (Double buyPrice) {
+        this.buyPrice = buyPrice;
+        return this;
     }
 
     public Double getSellPrice() {
@@ -108,6 +141,10 @@ public class Trade {
     public void setSellPrice(Double sellPrice) {
         this.sellPrice = sellPrice;
     }
+    public Trade sellPrice (Double sellPrice) {
+        this.sellPrice = sellPrice;
+        return this;
+    }
 
     public String getBenchmark() {
         return benchmark;
@@ -116,12 +153,16 @@ public class Trade {
     public void setBenchmark(String benchmark) {
         this.benchmark = benchmark;
     }
+    public Trade benchmark (String benchmark) {
+        this.benchmark = benchmark;
+        return this;
+    }
 
-    public Timestamp getTradeDate() {
+    public Date getTradeDate() {
         return tradeDate;
     }
 
-    public void setTradeDate(Timestamp tradeDate) {
+    public void setTradeDate(Date tradeDate) {
         this.tradeDate = tradeDate;
     }
 

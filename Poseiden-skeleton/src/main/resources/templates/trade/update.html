@@ -17,6 +17,72 @@
 			<!--
 			TODO: Create a form to edit the values of Trade, there are 2 buttons: Update data and Cancel to the Trade List
 			 -->
+			<input type="hidden" th:field="*{tradeId}" id="tradeId">
+			<div class="form-group">
+			<label for="account" class="col-sm-2 control-label">Account</label>
+			<div class="col-sm-10">
+				<input type="text" th:field="*{account}" id="account" placeholder="Account" class="col-4">
+				<p class="text-danger" th:if="${#fields.hasErrors('account')}" th:errors="*{account}"></p>
+			</div>
+
+			<div class="form-group">
+				<label for="type" class="col-sm-2 control-label">Type</label>
+				<div class="col-sm-10">
+					<input type="text"  th:field="*{type}" id="type" placeholder="Type" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="buyQuantity" class="col-sm-2 control-label">BuyQuantity</label>
+				<div class="col-sm-10">
+					<input type="number" th:field="*{buyQuantity}" id="buyQuantity" placeholder="BuyQuantity" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('buyQuantity')}" th:errors="*{buyQuantity}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="sellQuantity" class="col-sm-2 control-label">SellQuantity</label>
+				<div class="col-sm-10">
+					<input type="number" min="0" th:field="*{sellQuantity}" id="sellQuantity" placeholder="SellQuantity" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('sellQuantity')}" th:errors="*{sellQuantity}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="buyPrice" class="col-sm-2 control-label">BuyPrice</label>
+				<div class="col-sm-10">
+					<input type="number" min="0" th:field="*{buyPrice}" id="buyPrice" placeholder="BuyPrice" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('buyPrice')}" th:errors="*{buyPrice}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="sellPrice" class="col-sm-2 control-label">SellPrice</label>
+				<div class="col-sm-10">
+					<input type="number" min="0" th:field="*{sellPrice}" id="sellPrice" placeholder="SellPrice" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('sellPrice')}" th:errors="*{sellPrice}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="benchmark" class="col-sm-2 control-label">Benchmark</label>
+				<div class="col-sm-10">
+					<input type="text" min="0" th:field="*{benchmark}" id="benchmark" placeholder="Benchmark" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('benchmark')}" th:errors="*{benchmark}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="tradeDate" class="col-sm-2 control-label">TradeDate</label>
+				<div class="col-sm-10">
+					<input type="datetime-local" min="0" th:field="*{tradeDate}" id="tradeDate" placeholder="TradeDate" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('tradeDate')}" th:errors="*{tradeDate}"></p>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<a class="btn btn-danger btn-sm" href="/trade/list">Cancel</a>
+					<input class="btn btn-primary btn-sm" type="submit" value="Update Trade">
+				</div>
+			</div>
+			</div>
 		</form>
 	</div>
 

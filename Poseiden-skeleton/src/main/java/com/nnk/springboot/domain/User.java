@@ -29,6 +29,10 @@ public class User {
     public void setId(Integer id) {
         this.id = id;
     }
+    public User id (Integer id) {
+        this.id = id;
+        return this;
+    }
 
     public String getUsername() {
         return username;
@@ -36,6 +40,10 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+    public User username (String username) {
+        this.username = username;
+        return this;
     }
 
     public String getPassword() {
@@ -45,6 +53,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    public User password (String password) {
+        this.password = password;
+        return this;
+    }
 
     public String getFullname() {
         return fullname;
@@ -53,6 +65,10 @@ public class User {
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
+    public User fullname (String fullname) {
+        this.fullname = fullname;
+        return this;
+    }
 
     public String getRole() {
         return role;
@@ -60,6 +76,10 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+    public User role (String role) {
+        this.role = role;
+        return this;
     }
 
     @Override
