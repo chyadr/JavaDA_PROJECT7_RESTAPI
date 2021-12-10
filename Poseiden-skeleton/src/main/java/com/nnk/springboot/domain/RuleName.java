@@ -11,6 +11,7 @@ public class RuleName {
     @Id
     @GeneratedValue
     private Integer id;
+    @NotBlank(message = "Name is mandatory")
     @Column(name = "name")
     private String name;
     @Column(name = "description")

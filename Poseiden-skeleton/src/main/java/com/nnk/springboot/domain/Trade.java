@@ -16,8 +16,10 @@ public class Trade {
     @Id
     @GeneratedValue
     private Integer tradeId;
+    @NotBlank(message = "Account is mandatory")
     @Column(name = "account")
     private String account;
+    @NotBlank(message = "Type is mandatory")
     @Column(name = "type")
     private String type;
     @Column(name = "buyQuantity")

@@ -36,6 +36,8 @@ public class WebMvcConfig extends WebSecurityConfigurerAdapter implements WebMvc
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                .and()
+                .oauth2Login()
                 .permitAll()
                 .and()
                 .logout()
