@@ -1,11 +1,8 @@
 package com.nnk.springboot.service;
 
 import com.nnk.springboot.ConstantsTest;
-import com.nnk.springboot.domain.CurvePoint;
 import com.nnk.springboot.domain.Rating;
-import com.nnk.springboot.repositories.CurvePointRepository;
 import com.nnk.springboot.repositories.RatingRepository;
-import com.nnk.springboot.services.impl.CurvePointService;
 import com.nnk.springboot.services.impl.RatingService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

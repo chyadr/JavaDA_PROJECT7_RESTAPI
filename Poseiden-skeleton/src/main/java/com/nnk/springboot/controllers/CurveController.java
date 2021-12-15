@@ -17,7 +17,6 @@ import java.util.Optional;
 
 @Controller
 public class CurveController {
-    // TODO: Inject Curve Point service
     private final ICurvePointService curvePointService;
 
     public CurveController(ICurvePointService curvePointService) {
@@ -27,7 +26,6 @@ public class CurveController {
     @RequestMapping("/curvePoint/list")
     public String home(Model model)
     {
-        // TODO: find all Curve Point, add to model
         List<CurvePoint> curvePoints = curvePointService.findAll();
         model.addAttribute("curvePoints",curvePoints);
         return "curvePoint/list";
@@ -40,7 +38,6 @@ public class CurveController {
 
     @PostMapping("/curvePoint/validate")
     public String validate(@Valid CurvePoint curvePoint, BindingResult result, Model model) {
-        // TODO: check data valid and save to db, after saving return Curve list
         if(!result.hasErrors()) {
             curvePointService.createCurvePoint(curvePoint);
             return "redirect:/curvePoint/list";
@@ -50,7 +47,6 @@ public class CurveController {
 
     @GetMapping("/curvePoint/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
-        // TODO: get CurvePoint by Id and to model then show to the form
         Optional<CurvePoint> curvePoint = curvePointService.findById(id);
         model.addAttribute("curvePoint",curvePoint.orElse(null));
         return "curvePoint/update";
@@ -59,7 +55,6 @@ public class CurveController {
     @PostMapping("/curvePoint/update/{id}")
     public String updateCurve(@PathVariable("id") Integer id, @Valid CurvePoint curvePoint,
                              BindingResult result, Model model) {
-        // TODO: check required fields, if valid call service to update Curve and return Curve list
         if(!result.hasErrors()) {
             curvePointService.updateCurvePoint(curvePoint);
         }
@@ -68,7 +63,6 @@ public class CurveController {
 
     @GetMapping("/curvePoint/delete/{id}")
     public String deleteCurvePoint(@PathVariable("id") Integer id, Model model) {
-        // TODO: Find Curve by Id and delete the Curve, return to Curve list
         Optional<CurvePoint> curvePoint = curvePointService.findById(id);
         curvePoint.ifPresent(curvePointService::deleteCurvePoint);
         return "redirect:/curvePoint/list";

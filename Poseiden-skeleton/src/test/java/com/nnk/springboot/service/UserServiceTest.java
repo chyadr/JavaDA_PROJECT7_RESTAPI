@@ -1,11 +1,8 @@
 package com.nnk.springboot.service;
 
 import com.nnk.springboot.ConstantsTest;
-import com.nnk.springboot.domain.Trade;
 import com.nnk.springboot.domain.User;
-import com.nnk.springboot.repositories.TradeRepository;
 import com.nnk.springboot.repositories.UserRepository;
-import com.nnk.springboot.services.impl.TradeService;
 import com.nnk.springboot.services.impl.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

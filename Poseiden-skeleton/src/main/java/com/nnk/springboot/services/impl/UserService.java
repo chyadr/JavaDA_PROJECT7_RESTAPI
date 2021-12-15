@@ -1,6 +1,5 @@
 package com.nnk.springboot.services.impl;
 
-import com.nnk.springboot.domain.Trade;
 import com.nnk.springboot.domain.User;
 import com.nnk.springboot.repositories.UserRepository;
 import com.nnk.springboot.services.IUserService;

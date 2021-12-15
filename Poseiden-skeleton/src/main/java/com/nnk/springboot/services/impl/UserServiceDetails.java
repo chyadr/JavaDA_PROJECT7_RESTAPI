@@ -29,12 +29,7 @@ public class UserServiceDetails implements UserDetailsService {
             throw new UsernameNotFoundException("Bad credentials");
         }
 
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.singletonList(new GrantedAuthority() {
-            @Override
-            public String getAuthority() {
-                return user.getRole();
-            }
-        }));
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.singletonList((GrantedAuthority) user::getRole));
 
     }
 }

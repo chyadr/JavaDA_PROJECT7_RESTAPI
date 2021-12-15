@@ -31,7 +31,7 @@ public class RuleNameService implements IRuleNameSevice {
     public Optional<RuleName> findById(Integer id) {
         return ruleNameRepository.findById(id);
     }
-;
+
     @Override
     public void updateRuleName(RuleName ruleName) {
         ruleNameRepository.save(ruleName);

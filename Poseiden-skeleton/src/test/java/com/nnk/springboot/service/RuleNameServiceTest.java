@@ -1,9 +1,7 @@
 package com.nnk.springboot.service;
 
 import com.nnk.springboot.ConstantsTest;
-import com.nnk.springboot.domain.Rating;
 import com.nnk.springboot.domain.RuleName;
-import com.nnk.springboot.repositories.RatingRepository;
 import com.nnk.springboot.repositories.RuleNameRepository;
 import com.nnk.springboot.services.impl.RuleNameService;
 import org.junit.jupiter.api.Test;
