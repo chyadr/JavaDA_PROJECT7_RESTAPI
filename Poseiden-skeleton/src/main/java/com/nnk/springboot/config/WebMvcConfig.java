@@ -30,7 +30,7 @@ public class WebMvcConfig extends WebSecurityConfigurerAdapter implements WebMvc
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/user/validate","/saveUser")
+                .antMatchers("/user/add","/user/validate","/saveUser")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()

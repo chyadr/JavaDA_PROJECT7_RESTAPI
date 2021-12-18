@@ -43,6 +43,9 @@ public class UserController {
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             user.setPassword(encoder.encode(user.getPassword()));
             userService.createUser(user);
+            if (userService.isOAuth2()){
+                return "redirect:/";
+            }
             return "redirect:/user/list";
         }
         return "user/add";

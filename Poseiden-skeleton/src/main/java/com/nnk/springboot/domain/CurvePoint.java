@@ -1,6 +1,6 @@
 package com.nnk.springboot.domain;
 
-import com.nnk.springboot.Constants;
+import com.nnk.springboot.constants.Constants;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;

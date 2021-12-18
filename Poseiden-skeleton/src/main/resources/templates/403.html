@@ -6,7 +6,7 @@
 <body>
    <h3>Access Denied Exception</h3>
    <div>
-	    Logged in user: <b th:inline="text"  class="user"> <span sec:authentication="name"></span> </b>
+	    Logged in user: <b th:inline="text" th:text="${session.username}" class="user"></span> </b>
 	    <form th:action="@{/logout}" method="POST">
 	         <input type="submit" value="Logout"/>
 	    </form>
