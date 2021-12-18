@@ -78,7 +78,7 @@ public class UserControllerTest {
     public void givenUserId_whenShowUpdateForm_thenReturnUserUpdate()throws Exception{
         when(userService.findById(anyInt())).thenReturn(Optional.of(ConstantsTest.user));
 
-        mvc.perform(get("/user/update/1")
+        mvc.perform(get("/user/update/2")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE))
                 .andExpect(status().isOk()).andExpect(model()
                         .attributeExists("user"))
@@ -88,7 +88,7 @@ public class UserControllerTest {
     @Test
     public void givenInvalidUserAndId_whenUpdateBid_thenReturnUserUpdate()throws Exception{
 
-        mvc.perform(post("/user/update/1")
+        mvc.perform(post("/user/update/2")
                         .flashAttr("user",new User())
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE))
                 .andExpect(status().isOk())
@@ -98,7 +98,7 @@ public class UserControllerTest {
     @Test
     public void givenAValidUserAndId_whenUpdateBid_thenReturnUserList()throws Exception{
         doNothing().when(userService).updateUser(any());
-        mvc.perform(post("/user/update/1")
+        mvc.perform(post("/user/update/2")
                         .flashAttr("user",ConstantsTest.user)
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE))
                 .andExpect(status().is3xxRedirection())

@@ -118,6 +118,7 @@
 						<exclude>**/repositories/*</exclude>
 						<exclude>**/config/*</exclude>
 						<exclude>**/constants/*</exclude>
+						<exclude>**/integration/*</exclude>
 						<exclude>**/Application/*</exclude>
 					</excludes>
 				</configuration>
