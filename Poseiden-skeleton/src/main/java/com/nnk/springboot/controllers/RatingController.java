@@ -1,8 +1,6 @@
 package com.nnk.springboot.controllers;
 
-import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.domain.Rating;
-import com.nnk.springboot.services.IBidListService;
 import com.nnk.springboot.services.IRatingService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
